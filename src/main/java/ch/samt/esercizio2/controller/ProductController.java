@@ -27,7 +27,7 @@ public class ProductController {
         List<Product> result = new ArrayList<>(products.values());
 
         if (name != null) {
-            result = result.stream().filter(p -> p.getName().toLowerCase().contains(name.toLowerCase())).toList();
+            result = result.stream().filter(p -> p.getName().toLowerCase().startsWith(name.toLowerCase())).toList();
         }
 
         if (pricelessthan != null) {
