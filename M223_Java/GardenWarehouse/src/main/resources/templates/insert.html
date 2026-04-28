@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Item</title>
+    <link rel="stylesheet" href="/css/styler3.css">
+</head>
+<body>
+<h1>Insert new Item</h1>
+
+<form method="POST" th:object="${item}" th:action="@{/items/insert}">
+
+    <div>
+        <label for="code">Code:</label>
+        <input type="text" id="code" th:field="*{code}"/>
+        <span class="validationError" th:if="${#fields.hasErrors('code')}"
+              th:errors="*{code}">Code Error</span>
+    </div>
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" th:field="*{name}"/>
+        <span class="validationError" th:if="${#fields.hasErrors('name')}"
+              th:errors="*{name}">Name Error</span>
+    </div>
+
+    <div>
+        <label for="type">Type:</label>
+        <input type="text" id="type" th:field="*{type}"/>
+        <span class="validationError" th:if="${#fields.hasErrors('type')}"
+              th:errors="*{type}">Type Error</span>
+    </div>
+
+    <div>
+        <label for="price">Price:</label>
+        <input type="number" id="price" step="0.01" th:field="*{price}"/>
+        <span class="validationError" th:if="${#fields.hasErrors('price')}"
+              th:errors="*{price}">Price Error</span>
+    </div>
+
+    <div>
+        <label for="itemCount">Quantity:</label>
+        <input type="number" id="itemCount" th:field="*{itemCount}"/>
+        <span class="validationError" th:if="${#fields.hasErrors('itemCount')}"
+              th:errors="*{itemCount}">Quantity Error</span>
+    </div>
+
+    <div>
+        <button type="submit">Add</button>
+    </div>
+</form>
+
+<br>
+
+<h3><a href="/items">Show item list</a></h3>
+<h3><a href="/items/insert">Add a new item </a></h3>
+</body>
+</html>

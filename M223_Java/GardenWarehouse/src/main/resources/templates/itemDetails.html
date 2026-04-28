@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Details</title>
+    <link rel="stylesheet" href="/css/styler3.css">
+</head>
+<body>
+<h1>Item Details</h1>
+
+<p>ID: <span th:text="${item.id}"></span></p>
+<p>Code: <span th:text="${item.code}"></span></p>
+<p>Name: <span th:text="${item.name}"></span></p>
+<p>Type: <span th:text="${item.type}"></span></p>
+<p>Price: <span th:text="${item.price}"></span></p>
+<p>Quantity: <span th:text="${item.itemCount}"></span></p>
+
+<h3>Actions</h3>
+
+<a th:href="@{'/items/sell?code=' + ${item.code}}">Sell by 1</a>
+<br>
+<form th:action="@{/items/add}" method="get">
+    <input type="hidden" name="code" th:value="${item.code}">
+    <input type="number" name="number" placeholder="Adding quantity">
+    <button type="submit">Add</button>
+</form>
+
+<br>
+
+<h3><a href="/items">Show item list</a></h3>
+<h3><a href="/items/insert">Add a new item </a></h3>
+
+</body>
+</html>

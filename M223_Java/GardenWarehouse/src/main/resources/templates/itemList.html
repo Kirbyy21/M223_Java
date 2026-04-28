@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item list</title>
+    <link rel="stylesheet" href="/css/styler3.css">
+</head>
+<body>
+<h1>Item list</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Price</th>
+        <th>Quantity</th>
+    </tr>
+
+    <tr th:each="item : ${items}">
+        <td th:text="${item.id}"></td>
+        <td>
+            <a th:href="@{'/items/' + ${item.code}}" th:text="${item.code}"></a>
+        </td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.type}"></td>
+        <td th:text="${item.price}"></td>
+        <td th:text="${item.itemCount}"></td>
+    </tr>
+</table>
+
+<br>
+
+<h3><a href="/items">Show item list</a></h3>
+<h3><a href="/items/insert">Add a new item </a></h3>
+
+</body>
+</html>
