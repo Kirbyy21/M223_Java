@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    background-color: #1e1b1b; /* dark, soft black */
+    color: #e2dcd5; /* faded paper color */
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+    margin: 40px;
+    line-height: 1.6;
+}
+
+/* Titles */
+h1 {
+    color: #f5f1e3; /* slightly off-white */
+    border-bottom: 1px dotted #a29b8f;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 3px #00000044;
+}
+
+/* Links */
+a {
+    color: #d6cfc2;
+    text-decoration: underline dotted;
+}
+
+a:hover {
+    color: #b5594c; /* muted dark red */
+    text-shadow: 0 0 4px #b5594c66;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    width: 600px;
+    background: #2b2727;
+    border: 1px solid #555;
+}
+
+thead {
+    background: #322d2d;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 8px 12px;
+    text-align: left;
+    color: #e2dcd5;
+}
+
+th {
+}
+
+tr:hover {
+    background: #3a3535;
+}
+
+/* Form */
+form {
+    background: #2b2727;
+    padding: 20px;
+    border: 1px solid #555;
+    width: 360px;
+    box-shadow: 0 0 10px #00000088;
+}
+
+form div {
+    margin-bottom: 5px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #d6cfc2;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    background: #1e1b1b;
+    border: 1px solid #444;
+    color: #e2dcd5;
+    padding: 6px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #b5594c;
+    box-shadow: 0 0 5px #b5594c44;
+}
+
+/* Button */
+button {
+    background: #322d2d;
+    color: #e2dcd5;
+    border: 1px solid #555;
+    padding: 8px 16px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #b5594c;
+    color: #1e1b1b;
+    box-shadow: 0 0 8px #b5594c55;
+}
+
+/* Validation errors */
+.validationError {
+    color: #b5594c;
+    font-size: 18px;
+    font-weight: bold;
+}

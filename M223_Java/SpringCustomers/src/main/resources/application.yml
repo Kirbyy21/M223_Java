@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: Customers
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  datasource:
+    url: jdbc:h2:mem:customers-dev
+    driver-class-name: org.h2.Driver
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:data.sql
+
+server:
+  port: 8091
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  datasource:
+    url: jdbc:h2:mem:customers-prod
+    driver-class-name: org.h2.Driver
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:addressData.sql, classpath:customerData.sql, classpath:mealGroupData.sql, classpath:reservationData.sql
+server:
+  port: 8092

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+body {
+    background-color: #1a1a1a; /* dark, moody background */
+    color: #e0e0e0;           /* soft off-white text */
+    font-family: 'Special Elite', monospace; /* typewriter / diary vibe */
+    font-size: 20px;
+    margin: 40px;
+    line-height: 1.5;
+}
+
+/* Titles */
+h1 {
+    color: #f2dede; /* pale pinkish */
+    text-shadow: 0 0 5px #a84d77; /* subtle glow for eerie feel */
+    border-bottom: 2px solid #a84d77;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Links */
+a {
+    color: #a084c2; /* muted purple */
+    text-decoration: underline dotted;
+}
+
+a:hover {
+    color: #f28c8c; /* soft red accent */
+    text-shadow: 0 0 2px #f28c8c55;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    width: 600px;
+    background: #262626; /* dark table background */
+    border: 1px solid #444;
+}
+
+thead {
+    background: #333333;
+}
+
+th, td {
+    border: 1px solid #555;
+    padding: 8px 12px;
+    text-align: left;
+    color: #e0e0e0;
+}
+
+tr:hover {
+    background: #3a3a3a;
+}
+
+/* Form */
+form {
+    background: #262626;
+    padding: 20px;
+    border: 1px solid #444;
+    width: 360px;
+    box-shadow: 0 0 15px #7a3d6f33; /* eerie glow */
+}
+
+/* Form divs */
+form div {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #c9c9c9;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    background: #1f1f1f;
+    border: 1px solid #555;
+    color: #e0e0e0;
+    padding: 6px;
+    font-family: 'Special Elite', monospace;
+    font-size: 20px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #a84d77;
+    box-shadow: 0 0 5px #a84d7733;
+}
+
+/* Button */
+button {
+    background: #262626;
+    color: #e0e0e0;
+    border: 1px solid #a084c2;
+    padding: 8px 16px;
+    font-family: 'Special Elite', monospace;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #a084c2;
+    color: #1a1a1a;
+    box-shadow: 0 0 8px #a084c255;
+}
+
+/* Validation errors */
+.validationError {
+    color: #f28c8c;
+    font-size: 18px;
+    font-weight: bold;
+}

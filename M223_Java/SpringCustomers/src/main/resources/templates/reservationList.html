@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customers</title>
+  <link rel="stylesheet" href="/css/styler3.css">
+</head>
+<body>
+
+<h1>Reservation list</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Age</th>
+    <th>Reservation ID</th>
+    <th>Room</th>
+    <th>Check-in</th>
+    <th>Check-out</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr th:each="reservation : ${reservations}">
+    <td th:text="${reservation.customer.id}"></td>
+    <td th:text="${reservation.customer.name}"></td>
+    <td th:text="${reservation.customer.surname}"></td>
+    <td th:text="${reservation.customer.age}"></td>
+    <td th:text="${reservation.id}"></td>
+    <td th:text="${reservation.room}"></td>
+    <td th:text="${reservation.checkin}"></td>
+    <td th:text="${reservation.checkout}"></td>
+  </tr>
+
+
+  </tbody>
+</table>
+
+<br>
+
+<h3><a href="/customers">Customers List</a></h3>
+<h3><a href="/customers/insert">Add a new customer</a></h3>
+<h3><a href="/h2-console/login.do?jsessionid=66d937b23e18dcac56a4e29e96a0b3ff">Show DB</a></h3>
+</body>
+</html>

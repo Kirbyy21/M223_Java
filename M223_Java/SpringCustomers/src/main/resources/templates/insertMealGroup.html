@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/styler3.css">
+</head>
+<body>
+
+<form th:action="@{/customers/addcustomer-to-mealgroup}" method="post">
+    <label for="customerId">Customer:</label>
+    <select name="customerId" id="customerId">
+        <option th:each="customer: ${customers}"
+                th:value="${customer.id}"
+                th:text="${customer.name} + ' ' + ${customer.surname}">
+        </option>
+    </select>
+
+    <label for="mealGroupId">Meal group:</label>
+    <select name="mealGroupId" id="mealGroupId">
+        <option th:each="mealGroup: ${mealGroups}"
+                th:value="${mealGroup.id}"
+                th:text="${mealGroup.name}">
+        </option>
+    </select>
+    <br>
+    <button type="submit">Add</button>
+</form>
+
+<br>
+
+<h3><a href="/customers">Show customer list</a></h3>
+<h3><a href="/customers/mealgroups">Show meal groups list</a></h3>
+<h3><a href="/h2-console/login.do?jsessionid=66d937b23e18dcac56a4e29e96a0b3ff">Show DB</a></h3>
+</body>
+</html>

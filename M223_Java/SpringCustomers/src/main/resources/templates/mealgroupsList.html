@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/styler3.css">
+</head>
+<body>
+<div th:each="mealGroup: ${mealGroups}">
+    <div class="mytable-header" th:text="'Group ' + ${mealGroup.name} + ' guests:'"></div>
+    <table>
+        <thead>
+            <th th:text="Name"></th>
+            <th th:text="Surname"></th>
+        </thead>
+        <tbody>
+            <tr th:each="customer: ${mealGroup.customers}">
+                <td th:text="${customer.name}"></td>
+                <td th:text="${customer.surname}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<br>
+
+<h3><a href="/customers/addcustomer-to-mealgroup">Add a customer to a Meal Group</a></h3>
+<h3><a href="/customers">Customers List</a></h3>
+<h3><a href="/h2-console/login.do?jsessionid=66d937b23e18dcac56a4e29e96a0b3ff">Show DB</a></h3>
+
+</body>
+</html>
