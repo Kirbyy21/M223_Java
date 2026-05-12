@@ -26,11 +26,11 @@ spring:
       on-profile: prod
 
   datasource:
-    url: jdbc:h2:mem:customers-prod
+    url: jdbc:h2:file:./customers
     driver-class-name: org.h2.Driver
   sql:
     init:
       mode: always
-      data-locations: classpath:addressData.sql, classpath:customerData.sql, classpath:mealGroupData.sql, classpath:reservationData.sql
+      #data-locations: classpath:addressData.sql, classpath:customerData.sql, classpath:mealGroupData.sql, classpath:reservationData.sql
 server:
   port: 8092

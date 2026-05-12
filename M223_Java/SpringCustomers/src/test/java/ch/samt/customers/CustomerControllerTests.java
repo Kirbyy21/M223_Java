@@ -120,7 +120,7 @@ public class CustomerControllerTests {
                 .andExpect(model().attribute("mealGroups", mealGroupRepository.findAll()))
                 .andExpect(model().attribute("mealGroups", hasSize(3))) //3 gruppi: colazione, pranzo, cena
                 .andExpect(model().attribute("mealGroups",
-                        hasItem (hasProperty("name", is("Colazione"))))) //hasiten sempre necessario quando l'elemento cercato è in una lista
+                        hasItem (hasProperty("name", is("Colazione"))))) //hasItem sempre necessario quando l'elemento cercato è in una lista
                 .andExpect(model().attribute("mealGroups", hasItem (hasProperty("customers",
                         hasItem (hasProperty("name", is("Guido")))))))
                 .andExpect(model().attribute("mealGroups", hasItem(hasProperty("customers",
